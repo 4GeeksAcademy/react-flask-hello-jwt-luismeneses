@@ -7,6 +7,7 @@ from flask_admin.contrib.sqla import ModelView
 def setup_admin(app):
     app.secret_key = os.environ.get('FLASK_APP_KEY', 'sample key')
     app.config['FLASK_ADMIN_SWATCH'] = 'cerulean'
+    app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY', 'CLAVE-SUPER-SECRETA')
     admin = Admin(app, name='4Geeks Admin', template_mode='bootstrap3')
 
     
